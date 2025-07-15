@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
+import logo from '../Images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ const Navbar = () => {
           className="flex items-center gap-2 font-bold text-blue-600 dark:text-blue-400 text-xl hover:scale-105 transition-transform duration-300"
           onClick={() => setIsOpen(false)} // Fermer menu si click sur logo
         >
-          <img src="src/Images/logo.png" alt="Logo" className="w-20" />
+         <img src={logo} alt="Logo Keur Digital" className="w-20" />
         </NavLink>
 
         {/* Menu desktop */}
