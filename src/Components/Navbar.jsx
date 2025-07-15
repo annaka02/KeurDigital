@@ -1,32 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  const links = [
+    { name: 'Accueil', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'À propos', path: '/a-propos' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
-    <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      {/* Logo ou nom */}
-      <div className="text-2xl font-bold text-blue-600">
-        Keur Digital
-      </div>
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <NavLink to="/" className="flex items-center gap-2 font-bold text-blue-600 text-xl hover:scale-105 transition-transform duration-300">
+          <img src="src/Images/logo.png" alt="Logo" className="w-35" />
+        </NavLink>
 
-      {/* Liens */}
-      <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-        <li><Link to="/" className="hover:text-blue-600">Accueil</Link></li>
-        <li><Link to="/services" className="hover:text-blue-600">Services</Link></li>
-        <li><Link to="/realisations" className="hover:text-blue-600">Réalisations</Link></li>
-        <li><Link to="/a-propos" className="hover:text-blue-600">À propos</Link></li>
-        <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
-      </ul>
-
-      {/* Menu burger mobile */}
-      <div className="md:hidden">
-        <button>
-          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
-          </svg>
-        </button>
-      </div>
-    </nav>
+        {/* Liens de navigation */}
+        <ul className="flex gap-6">
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `relative px-2 py-1 font-medium transition-all duration-300 ${
+                    isActive ? 'text-blue-600' : 'text-gray-700'
+                  } hover:text-blue-600 group`
+                }
+              >
+                {link.name}
+                {/* Barre animée sous le lien */}
+                <span className="block h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
 

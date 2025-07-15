@@ -7,8 +7,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Bloc 1 : nom + slogan */}
         <div>
-          <h3 className="text-2xl font-bold mb-2">Keur Digital</h3>
-          <p className="text-sm">Votre partenaire créatif pour le digital.</p>
+           <img src="src/Images/logo.png" alt="Logo" className="w-85" />
         </div>
 
         {/* Bloc 2 : Liens rapides */}
@@ -17,7 +16,7 @@ const Footer = () => {
           <ul className="space-y-1 text-sm">
             <li><Link to="/" className="hover:underline">Accueil</Link></li>
             <li><Link to="/services" className="hover:underline">Services</Link></li>
-            <li><Link to="/realisations" className="hover:underline">Réalisations</Link></li>
+            <li><Link to="/realisations" className="hover:underline">A propos</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
@@ -26,7 +25,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-2">Contact</h4>
           <ul className="text-sm space-y-1">
-            <li>📧 contact@keurdigital.com</li>
+            <li>📧 keur.digital@outllok.com</li>
             <li>📱 WhatsApp : +221 77 123 45 67</li>
             <li>
               📸 <a href="https://instagram.com/keurdigital" className="hover:underline" target="_blank" rel="noreferrer">Instagram</a>

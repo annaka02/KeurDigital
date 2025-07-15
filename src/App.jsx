@@ -1,5 +1,10 @@
-import { BrowserRouter } from 'react-router-dom';
+
 import './App.css'
+import Accueil from './Pages/Accueil';
+import Services from './Pages/Services';
+import Realisations from './Pages/Realisations';
+import APropos from './Pages/Pourquoichoisir';
+import Contact from './Pages/Contact';
 
 function App() {
     return (

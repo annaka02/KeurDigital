@@ -1,1 +1,8 @@
 @import "tailwindcss";
+.bg-keur {
+  background-image: url(https://images.ctfassets.net/nla4ils4bv6t/34d5c3Pk349Peej2sEgj9a/c42a9462016380e51a538be87abb5f03/Social-media-.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
