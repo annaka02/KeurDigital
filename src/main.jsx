@@ -1,24 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './Components/Navbar.jsx'
-import Accueil from './Pages/Accueil.jsx';
-import Services from './Pages/Services.jsx';
-import APropos from './Pages/Pourquoichoisir.jsx';
-import Contact from './Pages/Contact.jsx';
-import Footer from './Pages/Footer.jsx';
-import PourquoiChoisir from './Pages/Pourquoichoisir.jsx';
+import './index.css';
+import Navbar from './Components/Navbar';
+import Accueil from './Pages/Accueil';
+import Services from './Pages/Services';
+import PourquoiChoisir from './Pages/Pourquoichoisir';
+import Contact from './Pages/Contact';
+import Footer from './Pages/Footer';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
+ReactDOM.createRoot(document.getElementById('root')).render(
+ <React.StrictMode>
+    <BrowserRouter> 
       <Navbar />
-      <Accueil />
-      <Services />
-      <PourquoiChoisir />
-      <Contact />
-      <Footer />
+       <Accueil />
+        <Services />
+         <PourquoiChoisir />
+          <Contact />
+           <Footer />
+            <App/>
     </BrowserRouter>
-  </StrictMode>,
+  </React.StrictMode>
 )
