@@ -23,7 +23,6 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
         >
           <img src={logo} alt="Logo" className="w-20" />
-          Keur Digital
         </NavLink>
 
         {/* Menu desktop */}

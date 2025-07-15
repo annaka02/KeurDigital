@@ -5,19 +5,21 @@ import { motion } from 'framer-motion';
 
 const Accueil = () => {
   return (
-    <section className="relative min-h-screen bg-keur flex items-center justify-center px-6">
-      {/* Overlay */}
-      <div className="absolute inset-0  bg-opacity-60 z-0"></div>
+    <section
+      className="relative min-h-screen flex items-center justify-center px-6 bg-center bg-cover bg-keur"
+    >
+      {/* Overlay noir translucide */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
 
-      {/* Contenu avec vraie animation zoom + slide */}
+      {/* Contenu texte avec animation */}
       <motion.div
-        className="relative z-10 text-center max-w-3xl text-black"
+        className="relative z-10 text-center max-w-3xl text-white"
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
         <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-6"
+          className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -26,7 +28,7 @@ const Accueil = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl mb-6"
+          className="text-lg md:text-xl mb-6 drop-shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
