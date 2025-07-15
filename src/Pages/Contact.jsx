@@ -8,35 +8,44 @@ const Contact = () => {
   const form = useRef();
   const [messageSent, setMessageSent] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+  e.preventDefault();
 
-    // Envoi au business
-    emailjs.sendForm(
-      'service_c0t5szb',        // 🔁 Ton service ID
-      'template_dh92bie',     // 📩 Ton template de réception
-      form.current,
-      '27FJ-1QPh4CqL4_l8'       // 🔐 Ton public key
-    ).then(
-      (result) => {
-        console.log('Message envoyé', result.text);
-        setMessageSent(true);
-      },
-      (error) => {
-        console.error('Erreur :', error.text);
-      }
-    );
+  const email = form.current.reply_to.value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Réponse automatique client
-    emailjs.sendForm(
-      'service_c0t5szb',
-      'template_ak54x2m',  // 📩 Ton template de réponse automatique
-      form.current,
-      '27FJ-1QPh4CqL4_l8'
-    );
+  if (!emailRegex.test(email)) {
+    alert("Veuillez entrer une adresse email valide.");
+    return;
+  }
 
-    e.target.reset();
-  };
+  // Envoi au business
+  emailjs.sendForm(
+    'service_c0t5szb',
+    'template_dh92bie',
+    form.current,
+    '27FJ-1QPh4CqL4_l8'
+  ).then(
+    (result) => {
+      console.log('Message envoyé', result.text);
+      setMessageSent(true);
+    },
+    (error) => {
+      console.error('Erreur :', error.text);
+    }
+  );
+
+  // Réponse automatique client
+  emailjs.sendForm(
+    'service_c0t5szb',
+    'template_ak54x2m',
+    form.current,
+    '27FJ-1QPh4CqL4_l8'
+  );
+
+  e.target.reset();
+};
+
 
   return (
     <section className="min-h-screen bg-gray-50 px-6 py-16">
