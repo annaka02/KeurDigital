@@ -42,7 +42,6 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)} // Fermer menu si click sur logo
         >
           <img src="src/Images/logo.png" alt="Logo" className="w-20" />
-          Keur Digital
         </NavLink>
 
         {/* Menu desktop */}
