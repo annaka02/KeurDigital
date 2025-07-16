@@ -89,19 +89,19 @@ const sendEmail = (e) => {
             <div>
               <h3 className="text-xl font-semibold text-yellow-600 mb-4">Suivez-nous</h3>
               <div className="grid grid-cols-2 gap-4">
-                <a href="https://instagram.com/keurdigital" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-pink-500 hover:underline">
+                <a href="https://instagram.com/keur_digital" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-pink-500 hover:underline">
                   <FaInstagram /> Instagram
                 </a>
-                <a href="https://facebook.com/keurdigital" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                <a href="https://facebook.com/keurdigital221" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
                   <FaFacebookF /> Facebook
                 </a>
                 <a href="https://wa.me/221771234567" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-green-500 hover:underline">
                   <FaWhatsapp /> WhatsApp
                 </a>
-                <a href="https://x.com/keurdigital" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-gray-700 hover:underline">
+                <a href="https://x.com/digitalkeur" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-gray-700 hover:underline">
                   <FaXTwitter /> X (Twitter)
                 </a>
-                <a href="https://tiktok.com/@keurdigital" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-black hover:underline">
+                <a href="https://tiktok.com/@keurdigital2025" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-black hover:underline">
                   <FaTiktok /> TikTok
                 </a>
               </div>

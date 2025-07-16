@@ -30,10 +30,10 @@ const Footer = () => {
             <li>📧 keur.digital@outllok.com</li>
             <li>📱 WhatsApp : +221 77 123 45 67</li>
             <li>
-              📸 <a href="https://instagram.com/keurdigital" className="hover:underline" target="_blank" rel="noreferrer">Instagram</a>
+              📸 <a href="https://instagram.com/keur_digital" className="hover:underline" target="_blank" rel="noreferrer">Instagram</a>
             </li>
             <li>
-              💼 <a href="https://linkedin.com/company/keurdigital" className="hover:underline" target="_blank" rel="noreferrer">LinkedIn</a>
+              💼 <a href="https://linkedin.com/company/keur_digital" className="hover:underline" target="_blank" rel="noreferrer">LinkedIn</a>
             </li>
           </ul>
         </div>
