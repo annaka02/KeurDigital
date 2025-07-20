@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Images/logo.png';
+import logo from '../Images/logo.jpeg';
 
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Bloc 1 : nom + slogan */}
         <div>
-          <img src={logo} alt="Logo Keur Digital" className="w-85" />
+          <img src={logo} alt="Logo Keur Digital" className="w-45" />
         </div>
 
         {/* Bloc 2 : Liens rapides */}

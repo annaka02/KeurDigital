@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../Images/logo.png';
+import logo from '../Images/logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
           className="flex items-center gap-2 font-bold text-blue-600 text-xl hover:scale-105 transition-transform duration-300"
           onClick={() => setIsOpen(false)}
         >
-          <img src={logo} alt="Logo" className="w-20" />
+          <img src={logo} alt="Logo" className="w-15" />
         </NavLink>
 
         {/* Menu desktop */}
