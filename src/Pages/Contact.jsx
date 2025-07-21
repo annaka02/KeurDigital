@@ -57,17 +57,20 @@ const sendEmail = (e) => {
           <form ref={form} onSubmit={sendEmail} className="bg-white p-6 rounded-lg shadow-md space-y-4">
             <div>
               <label className="block mb-1 text-gray-700">Nom</label>
-              <input name="from_name" type="text" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500" placeholder="Votre nom" />
+              <input name="from_name" type="text" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500"  maxLength={10}  pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+$"
+    title="Veuillez entrer un nom valide (lettres uniquement)" placeholder="Votre nom" />
             </div>
 
             <div>
               <label className="block mb-1 text-gray-700">Email</label>
-              <input name="reply_to" type="email" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500" placeholder="exemple@mail.com" />
+              <input name="reply_to" type="email" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500" maxLength={100}
+                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Veuillez entrer une adresse email valide" placeholder="exemple@mail.com" />
             </div>
 
             <div>
               <label className="block mb-1 text-gray-700">Message</label>
-              <textarea name="message" rows="4" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500" placeholder="Votre message..." />
+              <textarea name="message" rows="4" required className="w-full border rounded px-3 py-2 focus:ring-emerald-500"  minLength={30} placeholder="Votre message..." />
             </div>
 
             <button type="submit" className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 transition">
